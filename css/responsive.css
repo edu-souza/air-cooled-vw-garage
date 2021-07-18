@@ -1,0 +1,14 @@
+/* Estilos para smartphones */
+
+@media only screen and (max-width: 757px) {
+.title h1 {
+    font-size: 4.65em;
+}    
+}
+
+@media only screen and (min-width: 730px) and (max-width: 891px) {
+.logo-img {
+    align-self: center;
+    flex-wrap: wrap;
+}
+}

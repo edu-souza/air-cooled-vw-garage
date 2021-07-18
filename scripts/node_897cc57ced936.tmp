@@ -1,0 +1,28 @@
+const images = document.querySelectorAll('.carros');
+let alt = document.querySelectorAll('.altDesc')[0].style.display = 'none';
+cars = Array.from(images)
+
+cars.forEach(function(item,index){
+    item.addEventListener('mouseover',function(){
+      let desc = document.querySelectorAll(".desc-padrao")[0];
+    if (index === 0){
+        desc.innerHTML = document.querySelectorAll(".desc-teste")[0].innerHTML; 
+    } else if (index === 1) {
+        desc.innerHTML = document.querySelectorAll(".desc-laranja")[0].innerHTML; 
+    } else if (index === 2) {
+        desc.innerHTML = document.querySelectorAll(".desc-vermelho")[0].innerHTML; 
+    } else if (index === 3) {
+      desc.innerHTML = document.querySelectorAll(".desc-amarelo")[0].innerHTML; 
+    } else if (index === 4) {
+      desc.innerHTML = document.querySelectorAll(".desc-azul")[0].innerHTML; 
+    }
+    })
+})
+
+const imgs = document.getElementsByTagName('img');
+let soma = 0;
+let i = 0;
+for(i = 0;i < imgs.length;i++){
+    soma += imgs[i].width;
+}
+console.log(soma)

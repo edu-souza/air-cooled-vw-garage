@@ -1,0 +1,272 @@
+*{
+    box-sizing: border-box;
+    outline: 1px solid red;
+}
+html{
+    font-size: 16px;
+}
+body,h1,h2,h3,p,ul,li,a {
+    margin: 0px;
+    padding: 0px;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+a {
+    text-decoration: none !important;
+}
+ul {
+    list-style: none;
+}
+body {
+    background-color: #e7cf8a ;
+}
+.title h1 {
+    font-family: 'Poiret One', cursive;
+}
+/* Info */
+.info-bg a {
+    color: #222;
+}
+.info {
+    max-width: 960px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}
+.info p, .info a {
+    margin: 0px 10px 10px 10px;
+}
+/* Menu */
+.menu-bg {
+    background-color: #222;
+    color: #FAF6ED;
+}
+.menu-nav a {
+    color: #FAF6ED;
+}
+.menu-nav ul {
+    display: flex;
+    max-width: 960px;
+    margin: 0 auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px 0;
+}
+.menu-nav a {
+    padding: 10px;
+}
+/* Título */
+.title {
+    display: flex;
+    justify-content: space-around;
+    max-width: 960px;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    color: #222;
+}
+.title h1 {
+    text-transform: uppercase;
+    font-size: 6.65em;
+    padding: 0 10px;
+    text-align: center;
+    flex: 1;
+    flex-wrap: wrap;
+}
+.logo {
+    flex: 2;
+}
+.main{
+    display: grid;
+    grid-template-columns: max-content 2fr;
+    grid-template-areas: 
+    "carr header "
+    "carr text   "
+    "carr text   "
+    "carr text   "
+    "carr text   "
+    "carr text   "
+    ;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.main-imgs {
+    grid-area: carr;
+    max-height: 520px;
+    overflow-y: scroll;
+    cursor: pointer;
+}
+.main-imgs::-webkit-scrollbar {
+    width: 18px;
+} 
+.main-imgs::-webkit-scrollbar-thumb {
+    background: #B90504;
+    border-left: 4px solid #222;
+    border-right: 4px solid #222;
+}
+
+.main-imgs::-webkit-scrollbar-track {
+    background: #222;
+}
+.titulo {
+    color:#FFF;
+    padding: 10px 10px;
+    background-color: #222222;
+    grid-area: "header";
+    text-align: center;
+}
+.paragraph {
+    padding: 16px 10px;
+    font-size: 18px;
+}
+.title-bar {
+    background-color: #222;
+    grid-area: "header";
+    margin-left: 10px;
+}
+.title-bar h2 {
+    text-align: left;
+} 
+.carrousel{
+    margin: 60px auto;
+}
+.carrousel h2 {
+    text-align: center;
+    background-color: #222;
+}
+.agendamento{
+    margin: 60px auto;
+}
+.agendamento h2,.Ordem h2 {
+    text-align: center;
+    background-color: #222;
+}
+.slides {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 60px;
+}
+.agenda {
+    margin: 20px auto;
+    background-color: #FAF6ED;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px; 
+    font-size: 18px;
+    max-width: 960px;
+}
+.Col ul li {
+    border-bottom: solid #222;
+    max-width: 960px;
+    padding: 10px 10px;
+}
+.Col input {
+    border :0;
+    font-size: 18px;
+    background-color: #FAF6ED;
+}
+.Col input:focus {
+    outline: none;
+}
+.btn{
+    margin-top: 30px;
+    background-color: #B90504;
+    color:#e7cf8a;
+    padding: 15px 35px;
+    border-style: none;
+    font-size: 18px;
+}
+.btn:hover {
+    transform: scale(1.1);
+}
+.agendados {
+    margin: 20px 0;
+    background-color: #FAF6ED;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px; 
+    font-size: 18px;
+}
+.agendados ul li {
+    border-bottom: solid #222;
+    padding: 10px 10px;   
+}
+.Ordem {
+    margin: 60px auto;
+}
+.agendados {
+    max-width: 60em;
+    margin: 30px auto;
+}
+.footer {
+    background-color: #222;
+    height: 60px;
+}
+.footer p {
+    color: #FAF6ED;
+    display: flex;
+    font: 20px;
+    padding: 15px 20px;
+    justify-content: center;
+    align-items: center;
+}
+.DTativo {
+    display: block !important;
+}
+.js .ativo {
+    display: block !important;
+}
+.js .js-lista-desc li {
+    display: none;
+}
+.js .js-lista-desc li.ativo{
+    display: block !important;
+    animation: show 1s forwards
+}
+.faq {
+    margin: 60px 0;
+}
+.faq-grid {
+    display: grid;
+    grid-template-columns:  0.5fr 2fr;
+    grid-template-areas: 
+    "icon desc";
+    max-width: 960px;
+    margin: 30px auto;
+}
+.faq-icons {
+    grid-area: "icon";
+    display: flex;
+    flex-direction: column;
+    font-size: 65px;
+    align-items:center;
+    color:#B90504;
+    margin-top: 22px;
+}
+.faq-icons i {
+    padding-bottom: 43px;
+}
+.faq-lista dl{
+    height: 348px;
+    font-size: 24px;
+}
+.faq-lista dl dt{
+    padding-bottom:100px;
+}
+.faq-lista dd {
+    display: none;
+} 
+/* Animação desc */
+@keyframes show {
+from {
+    opacity: 1;
+    transform: translate3d(-10px,0,0);
+} to {
+    opacity: 1;
+    transform: translate(0,0,0);
+}
+}
