@@ -33,8 +33,28 @@ function activeDT(item){
 } 
 }
 initFAQ();
- 
- 
+
+
+/* Scroll suave (não suportado em browsers antigos) */
+function SmoothScroll(){
+    const links = document.querySelectorAll('.menu-nav ul li a');
+    function ScrolltoSec(event) {
+      event.preventDefault();
+      const href = event.currentTarget.getAttribute('href');
+      const section = document.querySelector(href);
+      const topo = section.offsetTop;
+      window.scrollTo({
+        top: topo,
+        behavior: 'smooth',
+      });
+    }
+        
+    links.forEach((link) => {
+      link.addEventListener('click', ScrolltoSec);
+    })  
+}
+SmoothScroll()
+
 
 
 
