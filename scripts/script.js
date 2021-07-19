@@ -19,6 +19,7 @@ if ((SecImages.length) && (SecDesc.length)) {
 }
 
 /* Accordion List */
+function initFAQ() {
 const termos = document.querySelectorAll('.faq-lista dt');
 if (termos.length) {
 termos.forEach((item) => {
@@ -30,6 +31,8 @@ function activeDT(item){
     item.nextElementSibling.classList.toggle('DTativo');
   }
 } 
+}
+initFAQ();
  
  
 

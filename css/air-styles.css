@@ -1,7 +1,7 @@
-*{
+/*{
     box-sizing: border-box;
     outline: 1px solid red;
-}
+} */
 html{
     font-size: 16px;
 }
@@ -214,8 +214,14 @@ body {
     justify-content: center;
     align-items: center;
 }
-.DTativo {
-    display: block !important;
+.js .DTativo {
+    opacity: 1;
+    transition: opacity 1.3s; 
+}
+.faq-lista dl dd{
+    padding-bottom:40px;
+    transition: opacity 1.3s; 
+    opacity: 0;
 }
 .js .ativo {
     display: block !important;
@@ -225,16 +231,16 @@ body {
 }
 .js .js-lista-desc li.ativo{
     display: block !important;
-    animation: show 1s forwards
+    animation: show 1s forwards;
 }
 .faq {
     margin: 60px 0;
 }
 .faq-grid {
     display: grid;
-    grid-template-columns:  0.5fr 2fr;
+    grid-template-columns:  max-content 1fr max-content;
     grid-template-areas: 
-    "icon desc";
+    "icon desc img";
     max-width: 960px;
     margin: 30px auto;
 }
@@ -248,18 +254,22 @@ body {
     margin-top: 22px;
 }
 .faq-icons i {
-    padding-bottom: 43px;
+    padding-bottom: 90px;
+}
+.faq-icons i:first-child {
+    font-size: 46px;
 }
 .faq-lista dl{
-    height: 348px;
     font-size: 24px;
+    max-width: 525px;
 }
-.faq-lista dl dt{
-    padding-bottom:100px;
+.faq-lista dt {
+    cursor: pointer;
+    padding-left: 10px;
 }
-.faq-lista dd {
-    display: none;
-} 
+.faq-lista span {
+    color: #B90504;
+}
 /* Animação desc */
 @keyframes show {
 from {
