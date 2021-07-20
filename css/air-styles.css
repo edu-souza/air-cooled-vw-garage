@@ -223,7 +223,7 @@ body {
     transition: opacity 1.3s; 
     opacity: 0;
 }
-.js .ativo {
+.js.ativo {
     display: block !important;
 }
 .js .js-lista-desc li {
@@ -270,6 +270,16 @@ body {
 .faq-lista span {
     color: #B90504;
 }
+.js .js-scroll {
+    opacity: 0;
+    transition: 1s;
+
+}
+.js .js-scroll.ativo {
+    opacity: 1;
+    transition: 1s;
+    transform: translate3d(0,-10px,0);
+} 
 /* Animação desc */
 @keyframes show {
 from {

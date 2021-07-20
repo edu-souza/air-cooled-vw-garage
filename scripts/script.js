@@ -55,6 +55,23 @@ function SmoothScroll(){
 }
 SmoothScroll()
 
+/* Animação ao scroll */
+function initAnimaScroll(){
+
+    function AnimaScroll() {
+      const secs = document.querySelectorAll('.js-scroll');
+      const windowHalf = window.innerHeight * 0.7;
+      secs.forEach((section) => {
+        const SecTop = (section.getBoundingClientRect().top - windowHalf) < 0;
+          if (SecTop) {
+            section.classList.add('ativo');
+          }
+      })
+    }
+    window.addEventListener('scroll',AnimaScroll);
+    AnimaScroll()
+}
+initAnimaScroll()
 
 
 
