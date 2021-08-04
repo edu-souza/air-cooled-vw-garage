@@ -1,7 +1,7 @@
 /*{
     box-sizing: border-box;
     outline: 1px solid red;
-} */
+}  */
 html{
     font-size: 16px;
 }
@@ -46,7 +46,10 @@ body {
     color: #B90504;
 }
 .menu-nav a {
-    color: #FAF6ED;
+    color: #fff;
+}
+.menu-nav a:hover {
+    color: #e7cf8a;
 }
 .menu-nav ul {
     display: flex;
@@ -79,7 +82,7 @@ body {
 .logo {
     flex: 2;
 }
-.main{
+.main {
     display: grid;
     grid-template-columns: max-content 2fr;
     grid-template-areas: 
@@ -107,7 +110,6 @@ body {
     border-left: 4px solid #222;
     border-right: 4px solid #222;
 }
-
 .main-imgs::-webkit-scrollbar-track {
     background: #222;
 }
@@ -130,6 +132,32 @@ body {
 .title-bar h2 {
     text-align: left;
 } 
+/*Slides */
+.buttons {
+    text-align: center;
+}
+.buttons span {
+    cursor: pointer;
+    background-color: #B90504;
+    border-radius: 50%;
+    padding-left:10px;
+    color: #B90504;
+}
+.slides {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 60px;
+    max-width: 642px;
+    margin: 0 auto;
+}
+.slides img {
+    display: none;
+    margin: 20px;
+}
+.slides img.ativo {
+    display: block;
+}
 .carrousel{
     margin: 60px auto;
 }
@@ -137,26 +165,13 @@ body {
     text-align: center;
     background-color: #222;
 }
+/*Agendamento */
 .agendamento{
     margin: 60px auto;
 }
 .agendamento h2,.Ordem h2 {
     text-align: center;
     background-color: #222;
-}
-.slides {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 60px 60px;
-    overflow-x: scroll;
-    max-width: 642px;
-    margin: 0 auto;
-}
-.carrousel .buttons {
-    text-align: center;
-    width: max-content;
-    margin: 0 auto;
 }
 .agenda {
     margin: 20px auto;
@@ -194,8 +209,6 @@ body {
 .agendados {
     margin: 20px 0;
     background-color: #FAF6ED;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     padding: 15px; 
     font-size: 18px;
 }
@@ -210,6 +223,7 @@ body {
     max-width: 60em;
     margin: 30px auto;
 }
+/*#Footer*/
 .footer {
     background-color: #222;
     height: 60px;
@@ -222,15 +236,31 @@ body {
     justify-content: center;
     align-items: center;
 }
+/* ---------------------------------------------- */
+/*#FAQ*/
+.faq dl dd{
+    transition: visibility 1.3s; 
+    visibility: hidden;
+}
+.faq-div dd  {
+    padding-bottom: 40px;
+}
+.faq {
+    margin: 60px auto;
+}
+.faq-div {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+            /*FAQ Animações */
 .js .DTativo {
-    opacity: 1;
-    transition: opacity 1.3s; 
+    visibility: visible;
+    transition: visibility 1.3s; 
+
 }
-.faq-lista dl dd{
-    padding-bottom:40px;
-    transition: opacity 1.3s; 
-    opacity: 0;
-}
+
+/* Animação descrições */
 .js.ativo {
     display: block !important;
 }
@@ -241,43 +271,6 @@ body {
     display: block !important;
     animation: show 1s forwards;
 }
-.faq {
-    margin: 60px 0;
-}
-.faq-grid {
-    display: grid;
-    grid-template-columns:  max-content 1fr max-content;
-    grid-template-areas: 
-    "icon desc img";
-    max-width: 960px;
-    margin: 30px auto;
-}
-.faq-icons {
-    grid-area: "icon";
-    display: flex;
-    flex-direction: column;
-    font-size: 65px;
-    align-items:center;
-    color:#B90504;
-    margin-top: 22px;
-}
-.faq-icons i {
-    padding-bottom: 90px;
-}
-.faq-icons i:first-child {
-    font-size: 46px;
-}
-.faq-lista dl{
-    font-size: 24px;
-    max-width: 510px;
-}
-.faq-lista dt {
-    cursor: pointer;
-    padding-left: 10px;
-}
-.faq-lista span {
-    color: #B90504;
-}
 .js .js-scroll {
     opacity: 0;
     transition: 1s;
@@ -286,8 +279,7 @@ body {
     opacity: 1;
     transition: 1s;
     transform: translate3d(0,-10px,0);
-}
-/* Animação desc */
+} 
 @keyframes show {
 from {
     opacity: 1;

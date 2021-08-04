@@ -34,7 +34,6 @@ function activeDT(item){
 }
 initFAQ();
 
-
 /* Scroll suave (não suportado em browsers antigos) */
 function SmoothScroll(){
     const links = document.querySelectorAll('.menu-nav ul li a');
@@ -75,11 +74,20 @@ initAnimaScroll()
 
 /* Slides Projetos */
 
+function trocaImg(index) {
+  const Imgs = document.querySelectorAll('.slides .img-slide');
+  if (true) {
+     Imgs.forEach((item) => {
+      item.classList.remove('ativo');
+    }) 
+    Imgs[index].classList.add('ativo');
+  }
+}
 
-
-
-
-
-
-
+const btns = document.querySelectorAll('.slide-btn');
+btns.forEach((item,index) => {
+  item.addEventListener('click',() => {
+    trocaImg(index);
+  });
+})
 
