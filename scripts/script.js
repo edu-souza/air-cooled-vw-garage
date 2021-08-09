@@ -12,7 +12,7 @@ if ((SecImages.length) && (SecDesc.length)) {
   }
 
   SecImages.forEach((itemImg,index) =>{
-      itemImg.addEventListener('mouseover',() =>{
+      itemImg.addEventListener('mouseenter',() =>{
         activeTab(index)
       })
   })

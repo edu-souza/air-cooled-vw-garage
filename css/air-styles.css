@@ -1,7 +1,7 @@
 /*{
     box-sizing: border-box;
     outline: 1px solid red;
-}  */
+} */ 
 html{
     font-size: 16px;
 }
@@ -138,10 +138,17 @@ body {
 }
 .buttons span {
     cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: 0 2px;
     background-color: #B90504;
     border-radius: 50%;
-    padding-left:10px;
-    color: #B90504;
+    display: inline-block;
+    transition: all 0.4s ease;
+}
+.buttons span:hover {
+    background-color: #222;
+    transform: scale(1.1);
 }
 .slides {
     display: flex;
@@ -165,6 +172,7 @@ body {
     text-align: center;
     background-color: #222;
 }
+/*---------------------------------------------------*/
 /*Agendamento */
 .agendamento{
     margin: 60px auto;
@@ -198,13 +206,18 @@ body {
 .btn{
     margin-top: 30px;
     background-color: #B90504;
-    color:#e7cf8a;
+    color:#fff;
     padding: 15px 35px;
     border-style: none;
     font-size: 18px;
+    transition: all 0.4s;
+    border: solid 1px #B90504;
+    margin-right: 10px;
 }
 .btn:hover {
-    transform: scale(1.1);
+    background: transparent;
+    color: #B90504;
+
 }
 .agendados {
     margin: 20px 0;
@@ -238,28 +251,52 @@ body {
 }
 /* ---------------------------------------------- */
 /*#FAQ*/
+.faq-lista {
+    text-align: left;
+    font-size: 18px;
+}
 .faq dl dd{
-    transition: visibility 1.3s; 
-    visibility: hidden;
+    display: none;
+}
+.faq-div dt {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.faq-div dt:hover {
+    cursor: pointer;
+    color: #B90504;
 }
 .faq-div dd  {
     padding-bottom: 40px;
+    margin: 0 auto;
 }
 .faq {
     margin: 60px auto;
 }
 .faq-div {
-    max-width: 960px;
+    max-width: 445px;
     margin: 0 auto;
     text-align: center;
 }
+.faq-lista i {
+    color: #B90504;
+    padding: 15px;
+    font-size: 2.3rem;
+}
             /*FAQ Animações */
 .js .DTativo {
-    visibility: visible;
-    transition: visibility 1.3s; 
-
+    display: block !important;
+    animation: slideDown .5s forwards;
 }
-
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    } to {
+        opacity: 1;
+        max-height: 200px;
+    }
+}
 /* Animação descrições */
 .js.ativo {
     display: block !important;

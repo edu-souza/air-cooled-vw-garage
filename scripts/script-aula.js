@@ -198,3 +198,104 @@ Pessoa.prototype.nomeComp = function () {
     return this.nome + ' ' + this.sobrenome;
 }
  */
+
+/* const transacoes = [
+    {
+      descricao: 'Taxa do Pão',
+      valor: 'R$ 39',
+    },
+    {
+      descricao: 'Taxa do Mercado',
+      valor: 'R$ 129',
+    },
+    {
+      descricao: 'Recebimento de Cliente',
+      valor: 'R$ 99',
+    },
+    {
+      descricao: 'Taxa do Banco',
+      valor: 'R$ 129',
+    },
+    {
+      descricao: 'Recebimento de Cliente',
+      valor: 'R$ 49',
+    },
+  ];
+
+  const Valores = Array.from(transacoes);
+  let somaTaxa  = 0;
+  let somaReceb = 0;
+    Valores.forEach((item)=> {
+        if(item.descricao.startsWith('Taxa')) {
+            somaTaxa += +item.valor.slice(3);
+        } else {
+            somaReceb += +item.valor.slice(3);
+        }
+  })
+ console.log(somaTaxa);
+ console.log(somaReceb);  */
+
+/*  // Substitua todos os span's por a's
+const html = 
+`<ul>
+    <li><span>Sobre</span></li>
+    <li><span>Produtos</span></li>
+    <li><span>Contato</span></li>
+</ul>`;
+
+let aHtml = html.replace(/['span']+/g,'a'); */
+
+/* const frase = 'Melhor do ano!';
+console.log(frase.charAt(frase.length - 1)); */
+
+// Retorne o total de taxas
+/* const transacoes = ['Taxa do Banco', '   TAXA DO PÃO', '  taxa do mercado', 'depósito Bancário', 'TARIFA especial'];
+let QtdTaxa = 0;
+const aTrans = Array.from(transacoes);
+
+aTrans.forEach((item) => {
+    if (item.trim().toUpperCase().startsWith('TAX')) {
+        QtdTaxa++;
+    }
+})
+
+console.log(QtdTaxa); */
+
+/* const transportes = 'Carro;Avião;Trem;Ônibus;Bicicleta';
+const aTransp = transportes.split(';')
+console.log(aTransp); */
+
+/* EXERCÍCIOS NUMBERS E MATH */
+
+// Retorne um número aleatório
+// entre 1050 e 2000
+//const Aleat = Math.floor(Math.random() * (2000 - 1050) + 1050)
+//console.log(Aleat) ;
+
+ // Retorne o maior número da lista abaixo
+/* const numeros = '4, 5, 20, 8, 9';
+let aNums = numeros.split(', ');
+let aNumbs = []
+aNums.forEach((item,index) => {
+    aNumbs[index] = Number(item);
+})
+console.log(Math.max(...aNumbs)); */
+
+
+
+
+// Crie uma função para limpar os preços
+// e retornar os números com centavos arredondados
+// depois retorne a soma total
+/* const listaPrecos = ['R$ 59,99', ' R$ 100,222',
+                   'R$ 230  ', 'r$  200']; 
+
+const aLista = Array.from(listaPrecos);
+let aNums = []
+let Total = 0;
+aLista.forEach((item,index) => {
+    aNums[index] = Number.parseFloat(item.replace(/[',']+/g, '.').slice(3))
+    Total += Number.parseFloat(aNums[index].toFixed(2));
+})
+console.log(aNums,Total)
+ */
