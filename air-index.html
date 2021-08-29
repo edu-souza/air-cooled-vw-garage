@@ -2,17 +2,17 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap"
-      rel="stylesheet"
-    />
-		<link rel="stylesheet" href="/css/air-styles.css"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
+		<link rel="stylesheet" href="/css/air-styles.css"/>
     <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/e1c9041fa0.js" crossorigin="anonymous"></script>
     <script>document.documentElement.className += ' js'</script>
     <title>Aircooled Garage VW</title>
@@ -49,18 +49,18 @@
     </section>
 
     <section class="main js-scroll" id="Início">
-        <section class="main-imgs js-main-imgs">
-          <ul>  
-            <li><img alt="O que fazemos" class="carros" src="img/padrao.png"></li>
-            <li><img alt="Karmaan Guia laranja" class="carros" src="/img/karmaan.jpg"></li>
-            <li><img alt="Kombi vermelha" class="carros" src="/img/kombi.jpg"></li>
-            <li><img alt="Fusca amarelo" class="carros" src="/img/fusca.jpg"></li>
-            <li><img alt="Fusca azul" class="carros" src="/img/bluefusca.jpg"></li>
-          </ul> 
-        </section>
-        <section class="desc">
+      <section class="main-imgs js-main-imgs">
+        <ul>  
+          <li><img alt="O que fazemos" class="carros" src="img/padrao.png"></li>
+          <li><img alt="Karmaan Guia laranja" class="carros" src="/img/karmaan.jpg"></li>
+          <li><img alt="Kombi vermelha" class="carros" src="/img/kombi.jpg"></li>
+          <li><img alt="Fusca amarelo" class="carros" src="/img/fusca.jpg"></li>
+          <li><img alt="Fusca azul" class="carros" src="/img/bluefusca.jpg"></li>
+        </ul> 
+      </section>
+      <section class="desc">
         <ul class="js-lista-desc"> 
-        <li><div>  
+          <li><div>  
           <div class="title-bar">
             <h2 class="titulo">O que fazemos</h2>
           </div>
@@ -124,7 +124,7 @@
           </div></li>
           </ul>
       </section>
-    </section>
+    </section> <!-- End of main secrtion -->
     <section class="faq js-scroll" id="faq">
         <h2 class="titulo">F.A.Q.</h2>
         <div class="faq-div">
@@ -164,42 +164,53 @@
             <ul>
               <li>
                 <label for="modelo">Modelo: </label>  
-                <input class="field" name="modelo" id="modelo">
+                <select class="field" name="modelo" id="modelo">
+                  <option value="fusca 1300">Fusca 1300</option>
+                  <option value="fusca 1500">Fusca 1500</option>
+                  <option value="fusca 1600">Fusca 1600</option>
+                  <option value="karmann">Karmann Guia</option>
+                  <option value="kombi">Kombi</option>
+                  <option value="brasilia">Brasilia</option>
+                </select>
+               <!--  <input class="field" name="modelo" id="modelo"> -->
               </li>  
               <li>
-                <label for="dono">Dono: </label>  
-                <input class="field" name="dono" id="dono">
+                <label for="dono">Dono:&nbsp;&nbsp;&nbsp; </label>  
+                <input type="text" class="field" name="dono" id="dono">
               </li> 
           </div>
           <div class="Col">
             <ul>
               <li>
-                <label for="ano">Ano: </label>  
-                <input class="field" name="ano" id="ano"><br>
+                <label for="ano">Ano:&nbsp;&nbsp;&nbsp; </label>  
+                <input class="field" name="ano" id="ano"> 
               </li> 
               <li> 
-                <label for="placa">Placa: </label>  
+                <label for="placa">Placa:&nbsp;&nbsp;&nbsp; </label>  
                 <input class="field" name="placa" id="placa">
               </li> 
-          </div>
+          </div>  
         <a href="/air-index.html"><button type="submit" class="btn">Agendar</button></a>
         </div>
+
     </section>
     <section class="Ordem js-scroll">      
         <h2 class="titulo">Ordem de Atendimento</h2>
           <div class="agendados">
               <div class="lista-agenda">
                 <ul>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                  <li></li>
+                  <form>
+                    <li><input type="checkbox" class="tmark"></li>
+                    <li><input type="checkbox" class="tmark"></li>
+                    <li><input type="checkbox" class="tmark"></li>
+                    <li><input type="checkbox" class="tmark"></li>
+                    <li><input type="checkbox" class="tmark"></li>
+                    <li><input type="checkbox" class="tmark"></li>
+                    <li><input type="checkbox" class="tmark"></li>
+                    <li><input type="checkbox" class="tmark"></li>
+                    <li><input type="checkbox" class="tmark"></li>
+                    <li><input type="checkbox" class="tmark"></li>
+                  </form>
                 </ul>
               </div>
         <a href="/air-index.html"><button type="submit" class="btn">Editar</button></a>

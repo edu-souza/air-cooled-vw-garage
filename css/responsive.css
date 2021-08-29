@@ -2,7 +2,7 @@
 
 @media only screen and (max-width: 757px) {
 .title h1 {
-    font-size: 4.65em;
+    font-size: 4.18em;
 }    
 }
 
@@ -12,3 +12,19 @@
     flex-wrap: wrap;
 }
 }
+@media only screen and (min-width: 280px) and (max-width: 570px) {
+    .main-imgs {
+        overflow-x: scroll;
+        max-width: 100%;
+        overflow-y:unset;
+    }
+    .main-imgs ul {
+        display: flex;
+    }
+    .main-imgs ul li {
+        flex: 1 0 223px;
+    }
+    .title-bar {
+        margin-left: 0px;
+    }  
+} 

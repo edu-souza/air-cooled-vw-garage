@@ -1,13 +1,14 @@
 /*{
     box-sizing: border-box;
-    outline: 1px solid red;
-} */ 
+    outline: 0.1px solid red;
+} */   
 html{
     font-size: 16px;
 }
-body,h1,h2,h3,p,ul,li,a {
+* {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 img {
     max-width: 100%;
@@ -21,6 +22,12 @@ ul {
 }
 body {
     background-color: #e7cf8a ;
+}
+p,a,h2,dl{
+    font-family: 'Commissioner', sans-serif;
+}
+h2 {
+    font-family: 'Commissioner', sans-serif;
 }
 .title h1 {
     font-family: 'Poiret One', cursive;
@@ -83,24 +90,20 @@ body {
     flex: 2;
 }
 .main {
-    display: grid;
-    grid-template-columns: max-content 2fr;
-    grid-template-areas: 
-    "carr header "
-    "carr text   "
-    "carr text   "
-    "carr text   "
-    "carr text   "
-    "carr text   "
-    ;
+    display: flex;
+    flex-wrap: wrap;
     max-width: 960px;
     margin: 0 auto;
 }
 .main-imgs {
-    grid-area: carr;
+    display: flex;
+    flex-direction: column;
     max-height: 520px;
     overflow-y: scroll;
     cursor: pointer;
+}
+.desc {
+    flex: 1 1 300px;
 }
 .main-imgs::-webkit-scrollbar {
     width: 18px;
@@ -117,16 +120,14 @@ body {
     color:#FFF;
     padding: 10px 10px;
     background-color: #222222;
-    grid-area: "header";
     text-align: center;
 }
 .paragraph {
     padding: 16px 10px;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 .title-bar {
     background-color: #222;
-    grid-area: "header";
     margin-left: 10px;
 }
 .title-bar h2 {
@@ -184,32 +185,41 @@ body {
 .agenda {
     margin: 20px auto;
     background-color: #FAF6ED;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     padding: 15px; 
-    font-size: 18px;
-    max-width: 960px;
+    font-size: 1.125rem;
+    max-width: 940px;
+}
+.agenda a {
+    margin: 20px 10px;
+}
+.Col{
+    flex: 1 1 453px;
 }
 .Col ul li {
     border-bottom: solid #222;
-    max-width: 960px;
     padding: 10px 10px;
 }
 .Col input {
     border :0;
-    font-size: 18px;
+    font-size: 1.125rem;
     background-color: #FAF6ED;
+    font-family: 'Commissioner', sans-serif;
+}
+label,select {
+    font-family: 'Commissioner', sans-serif;
 }
 .Col input:focus {
     outline: none;
 }
 .btn{
-    margin-top: 30px;
+    margin-top: 15px;
     background-color: #B90504;
     color:#fff;
     padding: 15px 35px;
     border-style: none;
-    font-size: 18px;
+    font-size: 1.125rem;
     transition: all 0.4s;
     border: solid 1px #B90504;
     margin-right: 10px;
@@ -217,13 +227,12 @@ body {
 .btn:hover {
     background: transparent;
     color: #B90504;
-
 }
 .agendados {
     margin: 20px 0;
     background-color: #FAF6ED;
     padding: 15px; 
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 .agendados ul li {
     border-bottom: solid #222;
@@ -233,7 +242,7 @@ body {
     margin: 60px auto;
 }
 .agendados {
-    max-width: 60em;
+    max-width: 940px;
     margin: 30px auto;
 }
 /*#Footer*/
@@ -244,7 +253,7 @@ body {
 .footer p {
     color: #FAF6ED;
     display: flex;
-    font: 20px;
+    font-size: 1.25rem;
     padding: 15px 20px;
     justify-content: center;
     align-items: center;
@@ -253,7 +262,7 @@ body {
 /*#FAQ*/
 .faq-lista {
     text-align: left;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 .faq dl dd{
     display: none;
@@ -274,7 +283,7 @@ body {
     margin: 60px auto;
 }
 .faq-div {
-    max-width: 445px;
+    max-width: 500px;
     margin: 0 auto;
     text-align: center;
 }
