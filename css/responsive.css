@@ -26,5 +26,9 @@
     }
     .title-bar {
         margin-left: 0px;
-    }  
+    }
+    .buttons span {
+    height: 40px;
+    width: 40px;  
+    }
 } 

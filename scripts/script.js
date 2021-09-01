@@ -59,9 +59,9 @@ function initAnimaScroll(){
 
     function AnimaScroll() {
       const secs = document.querySelectorAll('.js-scroll');
-      const windowHalf = window.innerHeight * 0.7;
+      const MetadeJanela = window.innerHeight * 0.7;
       secs.forEach((section) => {
-        const SecTop = (section.getBoundingClientRect().top - windowHalf) < 0;
+        const SecTop = (section.getBoundingClientRect().top - MetadeJanela) < 0;
           if (SecTop) {
             section.classList.add('ativo');
           }
@@ -92,4 +92,66 @@ btns.forEach((item,index) => {
 })
 
 
+/* ============================================== */
+function validaForm() {
+  let form = document.forms[0].checkValidity();
+  if (!document.forms[0].checkValidity()) {
+    alert("Favor preencher todos os campos");
+    return false;
+  }
+  return true
+}
+
+function initAgendamento() {
+  function VerificaOpc(atributo) {
+    if(atributo === 'btnAgendar') {
+      if(validaForm()) {
+        Agendar()
+      }
+    }  else if (atributo === 'btnExcluir') {
+      Excluir()
+    }
+  }
+
+  function Agendar() {
+    let Lista = document.querySelectorAll('.lista-agenda ul');
+    let os =  (document.getElementById('modelo').value) + (document.getElementById('ano').value) + '  ' + 'Placa: ' +(document.getElementById('placa').value) + '   '+ (document.getElementById('dono').value);
+    let NovoLi = document.createElement('li');
+    NovoLi.classList.add('tmark');
+    let NovoInput = document.createElement('input');
+    NovoInput.setAttribute('type','checkbox');
+    NovoLi.appendChild(NovoInput);
+    let NovoSpan = document.createElement('span');
+    NovoSpan.innerHTML = os
+    NovoLi.appendChild(NovoSpan);
+    Lista[0].appendChild(NovoLi);
+  }
+
+  function Excluir() {
+    let AuxExclui = document.getElementsByClassName('tmark');
+    let Exclui = Array.from(AuxExclui);
+    let ForDelete = [];
+    //let Deleting = [];
+    let i = 0;
+    Exclui.forEach((item) => {
+      if (item.children[0].checked == true) {
+        ForDelete.push(item.children[0]);
+        ForDelete.push(item.children[1]);
+        ForDelete.push(item);}}
+    )
+      
+      for (i = 0; i < ForDelete.length;i++) {
+        ForDelete[i].remove();
+     } //end For
+  } //end Excluir()
+
+  const btns1 = document.getElementsByClassName('btn');
+  const btnsAgenda = Array.from(btns1);
+  btnsAgenda.forEach((item) => {
+      item.addEventListener('click',() => {
+        VerificaOpc(item.getAttribute('id'))
+      } )  
+  })
+}
+initAgendamento()
 

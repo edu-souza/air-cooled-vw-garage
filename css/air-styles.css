@@ -23,7 +23,7 @@ ul {
 body {
     background-color: #e7cf8a ;
 }
-p,a,h2,dl{
+p,a,h2,dl,span{
     font-family: 'Commissioner', sans-serif;
 }
 h2 {
@@ -223,6 +223,7 @@ label,select {
     transition: all 0.4s;
     border: solid 1px #B90504;
     margin-right: 10px;
+    font-family: 'Commissioner', sans-serif;
 }
 .btn:hover {
     background: transparent;
@@ -237,6 +238,9 @@ label,select {
 .agendados ul li {
     border-bottom: solid #222;
     padding: 10px 10px;   
+}
+.lista-agenda ul li span {
+    padding-left: 10px;
 }
 .Ordem {
     margin: 60px auto;
